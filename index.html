@@ -3,39 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boostrap-icons@1.10.4/font.boostrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="imagem/icon.png" type="image/x-icon">
-    <title>Pró Diesel</title>
+    <title>HOME- Pró-Diesel</title>
 </head>
 
 <body>
-    <header id="header">
-        <div class="container">
+    <nav>
+        
+        <a class="logo" href="#"> <img src="img/ferramentas.png" alt="logo"> </a>
 
-            <div class="flex">
+        <div class="menu-btn">
+            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
+        </div>
 
-                <a href="#"><img src="imagem/mecanico.png">  </a>
+        <ul>
+            <li> <a href="#" class="active"> HOME </a> </li>
+            <li> <a href="#"> SERVIÇOS</a> </li>
+            <li> <a href="#"> EQUIPE</a> </li>
+            <li> <a href="#"> SOBRE</a> </li>
+            <li> <a href="#"> CONTATO</a> </li>
+            <li> <a href="#"> MINHA CONTA</a> </li>
+            
+        </ul>
 
-                <nav>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">SERVIÇOS</a></li>
-                        <li><a href="#">EQUIPE</a></li>
-                        <li><a href="#">SOBRE</a></li>
-                    </ul>
-                </nav>
+    </nav>
+    <script src="main.js"></script>
 
-                <div class="btn-contato">
-                    <a href="#"><button>CONTATO</button></a>
-                </div> <!--btn--> 
-
-            </div> <!--flex--> 
-
-        </div> <!--container-->
-
-    </header>
     <section class="banner">
         <h1>MECÂNICA <span>DÍESEL</span></h1>
     </section>
