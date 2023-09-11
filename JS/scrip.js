@@ -8,3 +8,4 @@ function menuShow() {
         ul.classList.add('open');
     }
 }
+
