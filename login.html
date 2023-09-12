@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Do Cliente</title>
+    <!--ICON-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Área Do Cliente</title>
-
     <!--CSS-->
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -18,7 +18,7 @@
     <main id="container">
         <div class="left-login">
             <h1>Faça Login<br> <span> E acesse sua conta</span> </h1>
-            <img src="carro.svg" class="left-image-login" alt= "Carro animação">
+            <img src="img/carro-login.svg" class="left-image-login" alt="Carro animação">
         </div>
         <form id="login_form">
 
@@ -84,7 +84,7 @@
         const mode = document.getElementById('mode_icon');
 
         mode.addEventListener('click', () => {
-            const form = document.getElementById('login_form');
+            const form = document.getElementById('container');
 
             if (mode.classList.contains('fa-moon')) {
                 mode.classList.remove('fa-moon');
