@@ -27,7 +27,16 @@
                 <h1>Login</h1>
                 <i id="mode_icon" class="fa-solid fa-moon"></i>
             </div>
-
+        
+            <div class="col-12 col-sm-6 mb-3 form-floating">
+                <i class="fa-solid fa-id-card-clip"></i>
+                <label for="id"> PERFIL</label>
+                <select class="form-select shadow-none" id="perfil" required data-input>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="funcionario">Funcionário</option>
+                    <option value="cliente">Cliente</option>
+                </select>
+            </div>
             <!-- INPUTS -->
             <div id="inputs">
                 <!-- NAME -->
@@ -36,18 +45,18 @@
                         NOME
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="name" required>
                         </div>
                     </label>
                 </div>
-
+                
                 <!-- EMAIL -->
                 <div class="input-box">
                     <label for="email">
                         E-MAIL
                         <div class="input-field">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
                         </div>
                     </label>
                 </div>
@@ -58,7 +67,7 @@
                         SENHA
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" required>
                         </div>
                     </label>
 
