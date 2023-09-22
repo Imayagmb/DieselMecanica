@@ -172,6 +172,7 @@
     transform: scale(1.05);
 }
 
+
 /* DARK MODE */
 .dark#login_form,
 .dark#container {
@@ -182,7 +183,7 @@
 
 .dark#login_form .input-field input,
 .dark#login_form .input-field i,
-.dark input {
+.dark input{
     color: var(--color-light-50);
 }
 

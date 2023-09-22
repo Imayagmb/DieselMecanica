@@ -67,7 +67,7 @@
                     <input type="text" class="form-control shadow-none" id="name" name="name"
                         placeholder="Digite o seu Nome" minlength="15" maxlength="80" onclick="valida_nome()"
                         required />
-                    <label for="name">Digite o seu Nome*</label>
+                    <label for="name">Digite o seu Nome</label>
                 </div>
             </div>
             <div class="row mb-3">
@@ -137,17 +137,16 @@
                 <div id="steps" class="mb-md-3 pb-md-3">
                     <div class="line"></div>
                     <div class="step" id="step-1">
-                        <i class="bi bi-person active"></i>
+                        <i class="bi bi-person "></i>
                         <p class="d-none d-md-block">Dados pessoais</p>
                     </div>
-
                     <div class="step" id="step-2">
                         <i class="bi bi-geo-alt active"></i>
                         <p class="d-none d-md-block">Endereço</p>
                     </div>
-                    <div class="step">
-                        <i class="bi bi-credit-card"></i>
-                        <p class="d-none d-md-block">Pagamento</p>
+                    <div class="step" id="step-3">
+                        <i class="bi bi-person "></i>
+                        <p class="d-none d-md-block">Login</p>
                     </div>
                 </div>
                 <div id="form-header">
@@ -226,44 +225,131 @@
                             </select>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
+
+                    <!--Fomulário de cadastro Terceira etapa-->
+
+                    <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
+                        <div id="steps" class="mb-md-3 pb-md-3">
+                            <div class="line"></div>
+                            <div class="step" id="step-1">
+                                <i class="bi bi-person"></i>
+                                <p class="d-none d-md-block">Dados pessoais</p>
+                            </div>
+                            <div class="step" id="step-2">
+                                <i class="bi bi-geo-alt"></i>
+                                <p class="d-none d-md-block">Endereço</p>
+                            </div>
+                            <div class="step" id="step-3">
+                                <i class="bi bi-person active"></i>
+                                <p class="d-none d-md-block">Login</p>
+                            </div>
+                        </div>
+                        <div id="form-header">
+                            <h2>Cadastre seu Login</h2>
+                            <p>Preencha os campos e faça parte do nosso time</p>
+                            <p>Etapa <span id="etapa"></span></p>
+                        </div>
+                        
+
+                        <form id="dados-form">
+
+                            <div class="row mb-3">
+                                <div class="form-floating">
+
+                                    <input type="text" class="form-control shadow-none" id="name" name="name"
+                                        placeholder="Digite o seu Nome" minlength="15" maxlength="80"
+                                        onclick="valida_nome()" required />
+                                    <label for="name">Digite o seu Nome</label>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-6 mb-3 form-floating">
+                            <select class="form-select shadow-none" id="region" required data-input>
+                                <option selected>Perfil</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="cliente">Cliente</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                            <input type="text" class="form-control shadow-none" id="email" name="email"
+                                placeholder="email" required data-input />
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                            <input type="password" class="form-control shadow-none" id="password" name="password"
+                                placeholder="password" required data-input />
+                            <label for="password">Digite uma senha</label>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                            <input type="password" class="form-control shadow-none" id="password" name="password"
+                                placeholder="password" required data-input />
+                            <label for="password">Confirme sua senha</label>
+                        </div>
                     </div>
 
                 </form>
+
             </div>
 
-            <div class="d-flex justify-content-start">
-                <button id="prev" type="submit" class="btn btn-block btn-secundary">
-                    Voltar
-                </button>
-            </div>
-            <div class="d-flex justify-content-end">
-                <button id="next" type="submit" class="btn btn-block btn-secundary">
-                    Avançar
-                </button>
+            <div id="fade" class="hide">
+                <div id="loader" class="spinner-border text-info hide" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div id="message" class="hide">
+                    <div class="alert alert-light" role="alert">
+                        <h4>Mensagem:</h4>
+                        <p></p>
+                        <button id="close-message" type="button" class="btn btn-secondary">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <!--JS-->
-            <script src="js/cadastro.js" defer></script>
-            <script src="js/etapa2.js" defer></script>
-            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></Script>
-            <script>
-                $('#tel').mask('(00) 0000-0000');
-                $('#cel').mask('(00) 00000-0000');
-                $('#cpf').mask('000.000.000-00', { reverse: true });
-            </script>
-            <!--JavaScripts Bootstrap-->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-                crossorigin="anonymous"></script>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="d-flex justify-content-start">
+        <button id="prev" type="submit" class="btn btn-block btn-secundary">
+            Voltar
+        </button>
+    </div>
+    <div class="d-flex justify-content-end">
+        <button id="next" type="submit" class="btn btn-block btn-secundary">
+            Avançar
+        </button>
+    </div>
+
+    <!--JS-->
+    <script src="js/adastro.js" defer></script>
+    <script src="js/etapa2.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></Script>
+    <script>
+        $('#tel').mask('(00) 0000-0000');
+        $('#cel').mask('(00) 00000-0000');
+        $('#cpf').mask('000.000.000-00', { reverse: true });
+    </script>
+    <!--JavaScripts Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </body>
 
