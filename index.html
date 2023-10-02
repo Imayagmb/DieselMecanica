@@ -1,40 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>HOME- Pró-Diesel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Home</title>
+
+ <!-- Mini logo na aba -->
+ <link rel="shortcut icon" href="img/mini.jpg" type="image/x-icon">
+
+  <!-- Principal CSS do Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Style CSS Carousel-->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        
-        <a class="logo" href="#"> <img src="img/Logo.png" alt="logo"> </a>
 
-        <div class="menu-btn">
-            <i class="fa fa-bars fa-2x" onclick="menuShow()"></i>
-        </div>
-
-        <ul>
-            <li> <a href="#" class="active"> HOME </a> </li>
-            <li> <a href="#"> SERVIÇOS</a> </li>
-            <li> <a href="#"> EQUIPE</a> </li>
-            <li> <a href="#"> SOBRE</a> </li>
-            <li> <a href="#"> CONTATO</a> </li>
-            <li> <a href="#"> MINHA CONTA</a> </li>
-            
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Díesel+</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">INÍCIO </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVIÇOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTATO</a>
+          </li>
         </ul>
-
+        <form class="form-inline mt-2 mt-md-0">
+          <a class="btn btn-outline-success  mr-sm-2" type="submit" href="#">ÁREA DO CLIENTE</a>
+          <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">CADASTRO</a>
+        </form>
+      </div>
     </nav>
-    <script src="JS/scrip.js"></script>
+  </header>
 
-    <section class="banner">
-        <h1>MECÂNICA <span>DÍESEL</span></h1>
-    </section>
+
+  <!--Carousel-->
+  <main role="main">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-slide" src="img/Mercedes-Benz-Brasil.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>Carros de médio e grande porte</h1>
+              <p>Blá blá blá.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="second-slide" src="img/carro-pequeno-porte.jpeg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Carros de pequeno porte</h1>
+              <p>Blá blá blá blá blá blá blá blá blá blá</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="third-slide" src="img/geradores-a-diesel.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption text-right">
+              <h1>Geradores</h1>
+              <p>Blá blá blá.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Voltar</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Avançar</span>
+      </a>
+    </div>
+
+
+    <!-- Mensagens de marketing 
+      ================================================== -->
+    <!-- Restante da página em outro container, para centralizar todo o conteúdo. -->
+
+    <div class="container marketing">
+
+      <!-- Três colunas de texto, abaixo do carousel -->
+      <!--Row-->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="img/manutenção-preventiva.jpg" width="140" height="140">
+          <h2>Manutenção Preventiva</h2>
+          <p>É o tipo de manutenção mais barata e eficaz. É feita para evitar que um problema aconteça. Ou seja, aplica
+            a ideia da verificação e previsão de problemas, muitas vezes, trocando alguns componentes que ainda não
+            apresentaram problema.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="img/manutencao-corretiva.jpg" width="140" height="140">
+          <h2>Manutenção Corretiva </h2>
+          <p> É o tipo mais comum de manutenção, pois é feita depois de um incidente. O trabalho costuma ser mais
+            pesado, pois basicamente, esse tipo de manutenção aplica a ideia de que algo deve ser trocado apenas quando
+            apresentar problemas.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="img/manutenção-preditiva.jpg" width="140" height="140">
+          <h2>Manutenção Preditiva</h2>
+          <p> É mais eficiente, porém precisa de um maior controle. É necessária uma avaliação mais aprofundada do
+            veículo, em geral usa um scanner automotivo. É mais fácil definir quais partes podem ficar com defeito logo
+            e fazer os ajustes necessários com antecedência.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /.row -->
+
+
+      <!-- Row Plus -->
+
+      <hr class="plus-divider">
+
+      <div class="row plus">
+        <div class="col-md-7">
+          <h2 class="plus-heading">Primeiro <span class="text-muted">título</span></h2>
+          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
+            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
+            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
+            blá blá blá .</p>
+        </div>
+        <!--/col-md-7-->
+
+        <div class="col-md-5">
+          <img class="plus-image img-fluid mx-auto" src="img/b.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+      <!--/col-md-5-->
+
+      <hr class="plus-divider">
+
+      <div class="row plus">
+        <div class="col-md-7 order-md-2">
+          <h2 class="plus-heading">Segundo <span class="text-muted">Título</span></h2>
+          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
+            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá .</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="plus-image img-fluid mx-auto" src="img/carro-grande-porte.jfif" alt="Generic placeholder image">
+        </div>
+      </div>
+      <!--/col-md-7 order-md-2-->
+
+      <hr class="plus-divider">
+
+      <div class="row plus">
+        <div class="col-md-7">
+          <h2 class="plus-heading">E, por último, essa aqui. <span class="text-muted">blá blá blá</span></h2>
+          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
+            blá </p>
+        </div>
+         <!--/col-md-7-->
+
+        <div class="col-md-5">
+          <img class="plus-image img-fluid mx-auto" src="img/images.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+       <!--/col-md-5-->
+
+      <hr class="plus-divider">
+
+      <!-- /Row Plus *-* -->
+
+    </div> <!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Voltar ao topo</a></p>
+      <p>&copy; DíeselPlus. 2023 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+    </footer>
+  </main>
+
+  <!--JavaScript do Bootstrap
+    ================================================== -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Faz o placeholders de imagens funcionarem.-->
+  <script src="js/holder.min.js"></script>
 </body>
 
 </html>
