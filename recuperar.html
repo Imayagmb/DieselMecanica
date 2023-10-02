@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Do Cliente</title>
+    <!--ICON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/recuperar.css">
+</head>
+
+<body>
+
+    <main id="container">
+        <div class="left-login">
+            <h1>Recuperando sua conta<br> </h1>
+            <img src="img/carro-login.svg" class="left-image-login" alt="Carro animação">
+        </div>
+        <form id="login_form">
+
+            <!-- FORM HEADER -->
+            <div id="form_header">
+                <h1>Recuperação de senha</h1>
+                <i id="mode_icon" class="fa-solid fa-moon"></i>
+            </div>
+
+
+                <!-- EMAIL -->
+                <div class="input-box">
+                    <label for="email">
+                        E-mail ou Número de celular
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </label>
+                </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOGIN BUTTON -->
+            <button type="submit" id="login_button">
+                Enviar código de recuperação
+            </button>
+        </form>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const mode = document.getElementById('mode_icon');
+
+        mode.addEventListener('click', () => {
+            const form = document.getElementById('container');
+
+            if (mode.classList.contains('fa-moon')) {
+                mode.classList.remove('fa-moon');
+                mode.classList.add('fa-sun');
+
+                form.classList.add('dark');
+                return;
+            }
+
+            mode.classList.remove('fa-sun');
+            mode.classList.add('fa-moon');
+
+            form.classList.remove('dark');
+        });
+    </script>
+
+</body>
+
+</html>
