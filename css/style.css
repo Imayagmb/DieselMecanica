@@ -144,7 +144,6 @@ body {
 
 /* BTN
   ------------------------- */
-
 /*Botão Cadastro, Área do Cliente e ver mais*/
 .btn {
     display: inline-block;
@@ -165,8 +164,6 @@ body {
 
 /* NAV
   ------------------------- */
-
-
 .nav-link {
     display: block;
     padding: .5rem 1rem
@@ -176,6 +173,7 @@ body {
 .nav-link:hover {
     text-decoration: none
 }
+
 
 /* LINK
   ------------------------- */
@@ -190,6 +188,8 @@ a:hover {
     color: #00b386;
     text-decoration: underline
 }
+
+
 /* CSS RESPONSIVE
   -------------------------------------------------- */
 
