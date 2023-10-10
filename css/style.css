@@ -15,9 +15,10 @@ body {
 /* Classe base do carousel */
 .carousel {
     margin-bottom: 4rem;
+    position: relative
 }
 
-/* Será feito alguns ajustes na legenda, pois tem posicionamento de imagens,  */
+/*Será feito alguns ajustes na legenda, pois tem posicionamento de imagens*/
 .carousel-caption {
     bottom: 3rem;
     z-index: 10;
@@ -35,6 +36,74 @@ body {
     left: 0;
     min-width: 100%;
     height: 32rem;
+}
+
+/*Indica em qual etapa está o carousel*/
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none
+}
+
+.carousel-indicators li {
+    position: relative;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    opacity: .5;
+    transition: opacity .6s ease
+}
+
+.carousel-indicators .active {
+    opacity: 1
+    /*Opacidade do indicador de etapa*/
+}
+
+
+/*Fonte*/
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    /*Color da fonte*/
+}
+
+
+/*Próximo e voltar carousel*/
+.carousel-item-next,
+.carousel-item-prev {
+    position: absolute;
+    top: 0
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
 }
 
 
@@ -73,6 +142,54 @@ body {
 }
 
 
+/* BTN
+  ------------------------- */
+
+/*Botão Cadastro, Área do Cliente e ver mais*/
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745
+}
+
+/* NAV
+  ------------------------- */
+
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    text-decoration: none
+}
+
+/* LINK
+  ------------------------- */
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+a:hover {
+    color: #00b386;
+    text-decoration: underline
+}
 /* CSS RESPONSIVE
   -------------------------------------------------- */
 

@@ -7,10 +7,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Home</title>
+  <title>Página Inicial</title>
 
- <!-- Mini logo na aba -->
- <link rel="shortcut icon" href="img/mini.jpg" type="image/x-icon">
+  <!-- Mini logo na aba -->
+  <link rel="shortcut icon" href="img/mini.jpg" type="image/x-icon">
 
   <!-- Principal CSS do Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Díesel+</a>
+      <a class="navbar-brand" href="index.html">Díesel+</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -31,13 +31,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">INÍCIO </a>
+            <a class="nav-link" href="index.html">INÍCIO </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">SERVIÇOS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">CONTATO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SOBRE NÓS</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -60,32 +63,36 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="first-slide" src="img/Mercedes-Benz-Brasil.jpg" alt="First slide">
+          <img class="first-slide" src="img/carousel-pequeno-porte..jpeg" alt="First slide">
           <div class="container">
             <div class="carousel-caption text-left">
-              <h1>Carros de médio e grande porte</h1>
-              <p>Blá blá blá.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+              <h1>Carros de Pequeno Porte</h1>
+              <p>A manutenção preventiva em veículos de pequeno porte, como mini vans e caminhonetes,
+                desempenha um papel crucial na garantia do desempenho confiável, da economia de combustível e da
+                segurança...</p>
+              <p><a class="btn btn-lg btn-primary" href="#pequeno" role="button">Ver mais</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="second-slide" src="img/carro-pequeno-porte.jpeg" alt="Second slide">
+          <img class="second-slide" src="img/Carousel- grande-e-medio..jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Carros de pequeno porte</h1>
-              <p>Blá blá blá blá blá blá blá blá blá blá</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+              <h1>Carros de Médio e Grande Porte</h1>
+              <p>Os mecânicos devem ter bastante atenção no tipo de atividade desempenhada pelo veículo e quais são as
+                circunstâncias de uso enfrentadas por ele...</p>
+              <p><a class="btn btn-lg btn-primary" href="#grande" role="button">Ver mais</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="img/geradores-a-diesel.jpg" alt="Third slide">
+          <img class="third-slide" src="img/carousel-estacionario..jpg" alt="Third slide">
           <div class="container">
             <div class="carousel-caption text-right">
-              <h1>Geradores</h1>
-              <p>Blá blá blá.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver mais</a></p>
+              <h1>Motores Estacionários</h1>
+              <p>A manutenção preventiva em motores estacionários é essencial para garantir a confiabilidade, a
+                eficiência e a segurança...</p>
+              <p><a class="btn btn-lg btn-primary" href="#estacionario" role="button">Ver mais</a></p>
             </div>
           </div>
         </div>
@@ -105,8 +112,12 @@
       ================================================== -->
     <!-- Restante da página em outro container, para centralizar todo o conteúdo. -->
 
-    <div class="container marketing">
+    <div class="manutencao text-center rounded p-4 mt-3">
+      <h2><span class="font-weight-bold">TIPOS DE MANUTENÇÃO
+        </span></h2>
+    </div>
 
+    <div class="container marketing">
       <!-- Três colunas de texto, abaixo do carousel -->
       <!--Row-->
       <div class="row">
@@ -116,7 +127,7 @@
           <p>É o tipo de manutenção mais barata e eficaz. É feita para evitar que um problema aconteça. Ou seja, aplica
             a ideia da verificação e previsão de problemas, muitas vezes, trocando alguns componentes que ainda não
             apresentaram problema.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+
         </div>
         <!-- /.col-lg-4 -->
 
@@ -126,7 +137,7 @@
           <p> É o tipo mais comum de manutenção, pois é feita depois de um incidente. O trabalho costuma ser mais
             pesado, pois basicamente, esse tipo de manutenção aplica a ideia de que algo deve ser trocado apenas quando
             apresentar problemas.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4">
@@ -135,7 +146,7 @@
           <p> É mais eficiente, porém precisa de um maior controle. É necessária uma avaliação mais aprofundada do
             veículo, em geral usa um scanner automotivo. É mais fácil definir quais partes podem ficar com defeito logo
             e fazer os ajustes necessários com antecedência.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Mais detalhes &raquo;</a></p>
+
         </div><!-- /.col-lg-4 -->
 
       </div><!-- /.row -->
@@ -145,51 +156,68 @@
 
       <hr class="plus-divider">
 
-      <div class="row plus">
+      <div class="pequeno row plus">
+        <a name="pequeno"></a>
         <div class="col-md-7">
-          <h2 class="plus-heading">Primeiro <span class="text-muted">título</span></h2>
-          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
-            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
-            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
-            blá blá blá .</p>
+          <h2 class="plus-heading"> Pequeno <span class="text-muted">Porte</span></h2>
+          <p class="lead">A manutenção preventiva em veículos de pequeno porte, como mini vans e caminhonetes,
+            desempenha um papel crucial na garantia do desempenho confiável, da economia de combustível e da segurança.
+            <br> A manutenção é uma prática essencial para garantir a confiabilidade, o
+            desempenho, a segurança e a economia a longo prazo. Ela não apenas prolonga a vida útil do veículo, mas
+            também ajuda a economizar dinheiro e a proteger o meio ambiente. Portanto, é importante seguir um plano de
+            manutenção regular e contar com um mecânico qualificado para garantir que seu veículo funcione da
+            melhor forma possível.
+          </p>
         </div>
         <!--/col-md-7-->
 
         <div class="col-md-5">
-          <img class="plus-image img-fluid mx-auto" src="img/b.jpg" alt="Generic placeholder image">
+          <img class="plus-image img-fluid mx-auto" src="img/porte-pequeno.webp" alt="Pequeno porte">
         </div>
       </div>
       <!--/col-md-5-->
 
       <hr class="plus-divider">
 
-      <div class="row plus">
+      <div class="medio row plus">
+        <a name="grande"></a>
         <div class="col-md-7 order-md-2">
-          <h2 class="plus-heading">Segundo <span class="text-muted">Título</span></h2>
-          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
-            blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá .</p>
+          <h2 class="plus-heading"> Médio e Grande <span class="text-muted">Porte</span></h2>
+          <p class="lead">Os mecânicos devem ter bastante atenção no tipo de atividade desempenhada pelo
+            veículo e quais são as circunstâncias de uso enfrentadas por ele. Isso porque esses fatores influenciam
+            diretamente na dinâmica de formulação das revisões preventivas. <br> A manutenção preventiva em um carro de
+            médio e grande porte envolve uma série de verificações e ajustes regulares para garantir o bom
+            funcionamento do veículo, prolongar sua vida útil e garantir a segurança do condutor e dos passageiros. É
+            aconselhável seguir o calendário de manutenção recomendado pelo fabricante e procurar um mecânico
+            qualificado para realizar esses serviços.
+          </p>
         </div>
         <div class="col-md-5 order-md-1">
-          <img class="plus-image img-fluid mx-auto" src="img/carro-grande-porte.jfif" alt="Generic placeholder image">
+          <img class="plus-image img-fluid mx-auto" src="img/carro-grande-porte.jfif" alt="Médio e Grande Porte">
         </div>
       </div>
       <!--/col-md-7 order-md-2-->
 
       <hr class="plus-divider">
 
-      <div class="row plus">
+      <div class="estacionario row plus">
+        <a name="estacionario"></a>
         <div class="col-md-7">
-          <h2 class="plus-heading">E, por último, essa aqui. <span class="text-muted">blá blá blá</span></h2>
-          <p class="lead">blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá blá
-            blá </p>
+          <h2 class="plus-heading"> Motores <span class="text-muted">Estacionários</span> </h2>
+          <p class="lead">A manutenção preventiva em motores estacionários é essencial para garantir a confiabilidade, a
+            eficiência e a segurança. Ela ajuda a evitar problemas graves, reduz os custos a longo prazo e garante que o
+            motor esteja pronto para operar de forma confiável nas condições mais críticas. É importante seguir um
+            programa de manutenção regular e contar com técnicos qualificados para realizar os serviços de manutenção
+            necessários. <br> A Manutenção preventiva em motores Estacionário proporcina, Prolongamento da Vida Útil,
+            Confiabilidade, Economia de Custos, Desempenho Otimizado, Segurança, Conformidade com Regulamentações, Redução de Emissões, Valor de Revenda etc. </p>
         </div>
-         <!--/col-md-7-->
+        <!--/col-md-7-->
 
         <div class="col-md-5">
-          <img class="plus-image img-fluid mx-auto" src="img/images.jpg" alt="Generic placeholder image">
+          <img class="plus-image img-fluid mx-auto" src="img/motor-estacionario.jpg" alt="Motor Estacionário">
         </div>
       </div>
-       <!--/col-md-5-->
+      <!--/col-md-5-->
 
       <hr class="plus-divider">
 
@@ -200,8 +228,8 @@
 
     <!-- FOOTER -->
     <footer class="container">
-      <p class="float-right"><a href="#">Voltar ao topo</a></p>
-      <p>&copy; DíeselPlus. 2023 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+      <p class="float-right"><a href="index.html">Voltar ao topo</a></p>
+      <p>&copy; DíeselPlus &middot; 2023 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
     </footer>
   </main>
 
