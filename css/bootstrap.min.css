@@ -131,6 +131,24 @@ ul ol,
 ul ul {
     margin-bottom: 0
 }
+
+
+/* LINK
+  ------------------------- */
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+a:hover {
+    color: #00b386;
+    text-decoration: underline
+}
+
+/* NAV
+  ------------------------- */
 .nav {
     display: -ms-flexbox;
     display: flex;
@@ -216,7 +234,8 @@ ul ul {
 }
 
 
-/*NAVBAR*/
+/* NAVBAR
+  ------------------------- */
 .navbar {
     position: relative;
     display: -ms-flexbox;
@@ -240,6 +259,16 @@ ul ul {
     align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    text-decoration: none
 }
 
 .navbar-brand {
@@ -663,8 +692,8 @@ ul ul {
 }
 
 
-
-/*CAROUSEL*/
+/* CAROUSEL
+  ------------------------- */
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -854,7 +883,21 @@ ul ul {
     content: ""
 }
 
-/*Btn*/
+/* BTN
+  ------------------------- */
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+
 @media screen and (prefers-reduced-motion:reduce) {
     .btn {
         transition: none
@@ -869,7 +912,7 @@ ul ul {
 .btn.focus,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+    box-shadow: 0 0 0 .2rem #007bff40
 }
 
 .btn.disabled,
@@ -886,21 +929,26 @@ fieldset:disabled a.btn {
     pointer-events: none
 }
 
+
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #2679a8;
+    border-color: #2679a8;
+    /*Botão Ver mais Carousel página HOME*/
 }
+
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc
+    background-color: #2c43aa;
+    border-color: #2c43aa;
+    /*Ao passar o mouse, altera a cor*/
+     /*Botão Ver mais Carousel página HOME*/
 }
 
 .btn-primary.focus,
 .btn-primary:focus {
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .5)
+    box-shadow: 0 0 0 .2rem #007bff80
 }
 
 .btn-primary.disabled,
@@ -913,11 +961,60 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf
+    color: #000000;
+    background-color: #89d6e9;
+    border-color: #89d6e9
+    /*Ao Clicar altera a cor*/
+    /*Botão Ver mais Carousel página HOME*/
 }
 
+
+.btn-outline-success {
+    color: #89d6e9;
+    background-color: transparent;
+    background-image: none;
+    border-color: #2679a8;
+    /*Botão no menu - Login e Cadastro*/
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #2679a8;
+    border-color: #c5c5c5
+    /*Ao passar o mouse a cor altera*/
+    /*Botão Login e Cadastro no menu*/
+}
+
+.btn-outline-success.focus,
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 .2rem #2c43aa
+    /*Aparece a borda ao clicar no botão */
+    /*Botão Login e Cadastro no menu*/
+}
+
+.btn-outline-success.disabled,
+.btn-outline-success:disabled {
+    color: #138496;
+    background-color: transparent
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.show>.btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: #2835a7;
+    border-color: #289fa7;
+    /*Ao clicar a cor do botão altera*/
+    /*Botão Login e Cadastro no menu*/
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem #285fa780;
+    /*Ao clicar a borda altera*/
+    /*Botão Login e Cadastro no menu*/
+}
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
@@ -963,6 +1060,11 @@ fieldset:disabled a.btn {
 }
 
 
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745
+}
 
 .btn-success:hover {
     color: #fff;
@@ -972,7 +1074,7 @@ fieldset:disabled a.btn {
 
 .btn-success.focus,
 .btn-success:focus {
-    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    box-shadow: 0 0 0 .2rem #28a74580
 }
 
 .btn-success.disabled,
@@ -993,7 +1095,7 @@ fieldset:disabled a.btn {
 .btn-success:not(:disabled):not(.disabled).active:focus,
 .btn-success:not(:disabled):not(.disabled):active:focus,
 .show>.btn-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .5)
+    box-shadow: 0 0 0 .2rem #28a74580
 }
 
 .btn-info {
@@ -1262,43 +1364,8 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 .2rem rgba(108, 117, 125, .5)
 }
 
-.btn-outline-success {
-    color: #2889a7;
-    background-color: transparent;
-    background-image: none;
-    border-color: #2874a7
-}
 
-.btn-outline-success:hover {
-    color: #fff;
-    background-color: #2894a7;
-    border-color: #c5c5c5
-}
 
-.btn-outline-success.focus,
-.btn-outline-success:focus {
-    box-shadow: 0 0 0 .2rem #7ba72880
-}
-
-.btn-outline-success.disabled,
-.btn-outline-success:disabled {
-    color: #138496;
-    background-color: transparent
-}
-
-.btn-outline-success:not(:disabled):not(.disabled).active,
-.btn-outline-success:not(:disabled):not(.disabled):active,
-.show>.btn-outline-success.dropdown-toggle {
-    color: #fff;
-    background-color: #289fa7;
-    border-color: #289fa7
-}
-
-.btn-outline-success:not(:disabled):not(.disabled).active:focus,
-.btn-outline-success:not(:disabled):not(.disabled):active:focus,
-.show>.btn-outline-success.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .2rem #28a73980
-}
 
 .btn-outline-info {
     color: #17a2b8;
@@ -1315,7 +1382,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-info.focus,
 .btn-outline-info:focus {
-    box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5)
+    box-shadow: 0 0 0 .2rem #17a2b880
 }
 
 .btn-outline-info.disabled,
@@ -4962,10 +5029,6 @@ textarea.form-control {
         transition: none
     }
 }
-
-/*NAV*/
-
-
 
 .card {
     position: relative;
