@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stepsform</title>
+    <title>Seja Cliente</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
@@ -16,13 +16,15 @@
             <h3>Passo <span id="passo"></span></h3>
             <form action="processa.php" method="post">
                 <div id="step_1" class="step">
+
+                     <!--Fomulário de cadastro Primeira etapa-->
                         <div class="form-group">
-                            <label for="nome">Qual o seu nome?:</label>
+                            <label for="nome">Qual o seu nome?</label>
                             <input type="text" name="nome" id="nome" class="form-control">
                         </div>
                         
                         <div class="form-group">
-                            <label for="name">Qual o nome da sua mãe?:</label>
+                            <label for="name">Qual o nome da sua mãe?</label>
                             <input type="text" class="form-control shadow-none" id="name-mae" name="name"
                                 placeholder="" minlength="15" maxlength="80" required />
                             
@@ -33,8 +35,8 @@
                                 <input type="date" class="form-control" id="date" name="date" placeholder="Data de Nascimento" required data-input />
                             </div>   
                             <div class=" form-group">
-                                <label>Qual o seu sexo?:</label>
-                                <select class="form-select shadow-none" id="region" required data-input>
+                                <label>Qual o seu sexo?</label>
+                                <select class="form-select shadow-none" id="sex" required data-input>
                                     <option selected>Sexo</option>
                                     <option value="Feminino">Feminino</option>
                                     <option value="Masculino">Masculino</option>
@@ -66,20 +68,22 @@
                                 <input type="email" name="email" id="email" class="form-control">
                             </div>
                         </div>
-                </div>                
+                </div>   
+                
+                  <!--Fomulário de cadastro Segunda etapa-->
                 <div id="step_2" class="step">
                         <div class="form-group">
-                            <label for="end">CEP:</label>
-                            <input type="text" name="end" id="end" class="form-control">
+                            <label for="cep">CEP:</label>
+                            <input type="text" name="cep" id="cep" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="fone">Rua:</label>
-                            <input type="tel" name="fone" id="fone" class="form-control">
+                            <label for="rua">Rua:</label>
+                            <input type="tel" name="rua" id="rua" class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <label for="cep">Numero da sua residência:</label>
-                            <input type="text" name="cep" id="cep" class="form-control">
+                            <label for="number">Numero da sua residência:</label>
+                            <input type="text" name="number" id="number" class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -88,8 +92,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="bairro">Cidade:</label>
-                            <input type="text" name="bairro" id="bairro" class="form-control">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" class="form-control">
                         </div>
                     
                         <div class="form-group">
@@ -125,7 +129,9 @@
                                 <option value="TO">Tocantins</option>
                             </select>
                         </div>
-                </div>                
+                </div>  
+                
+                <!--Fomulário de cadastro Terceira etapa-->
                 <div id="step_3" class="step">
                         <div class="form-group">
                             <label for="cep">Login:</label>
@@ -169,6 +175,13 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script>
+    $('#tel').mask('(00) 0000-0000');
+    $('#cel').mask('(00) 00000-0000');
+    $('#cpf').mask('000.000.000-00', { reverse: true });
+</script>
+
 <script>
  $(document).ready(function(){
 
@@ -212,3 +225,4 @@
  });
 </script>
 </body>
+</html>

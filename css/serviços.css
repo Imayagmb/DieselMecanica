@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+.servicos>h3 {
+    text-align: center;
+}
+
+.serivos .contrainer>p {
+    text-align: center;
+}
+
+.servicos .rows-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /*flex-wrap: nowrap; - Para alinhar o texto no card*/
+}
+
+.servicos .row-card-item {
+    background-color: #f0ffff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.servicos .row-card-item:hover {
+    background-color: #bce0e9;
+}
+
+.servicos .row-card-item:hover p {
+    color: #fff;
+}
+
+.servicos .row-card-item img {
+    border-radius: 14px;
+    width: 70px;
+    padding: 9px;
+}
+
+.servicos .row-card-item p.manutencao-revisao{
+    margin: 5px 0;
+    transition:0.3s ;
+}
+.servicos .row-card-item p.freio{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+.servicos .row-card-item p.iluminacao{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+.servicos .row-card-item p.checagem-inspecao{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+.servicos .row-card-item p.paneu{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+.servicos .row-card-item p.eletrica-eletronica{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+.servicos .row-card-item p.motor{
+    margin: 5px 0;
+    transform:0.3s ;
+}
+
