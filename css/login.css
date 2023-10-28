@@ -5,7 +5,7 @@
 /** VARIÁVEIS - COLORS **/
 :root {
     /* LIGHT */
-    --color-light-50: #f8fafc;
+    --color-light-50: #F6F9FF;
 
     /* DARK */
     --color-dark-50: #797984;
@@ -54,8 +54,8 @@
     justify-content: center;
     align-items: center;
     background: var(--color-dark-100);
-    background: var(--color-light-50);
-    animation: dark-to-light-background 0.3s ease-in-out;
+    background: var(--color-light-50); /*dark*/
+    animation: dark-to-light-background 0.3s ease-in-out; /*Ao atualizar aparece o dark*/
 }
 
 #login_form {
@@ -65,7 +65,7 @@
     padding: 30px 40px;
     border-radius: 8px;
     gap: 30px;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    box-shadow: 5px 5px 8px #00000056;
 
 }
 

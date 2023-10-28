@@ -2,345 +2,285 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastre-se</title>
-
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/cadastro.css" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-    <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seja Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cd2.css">
 </head>
 
-<body id="checkout-page">
-    <div id="fade" class="hide">
-        <div id="loader" class="spinner-border text-info hide" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <div id="message" class="hide">
-            <div class="alert alert-light" role="alert">
-                <h4>Mensagem:</h4>
-                <p></p>
-                <button id="close-message" type="button" class="btn btn-secondary">
-                    Fechar
-                </button>
-            </div>
-        </div>
-    </div>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Formulário de cadastro</h2>
+                <h2>Insira os seus dados a baixo:</h2>
+                <h3>Passo <span id="passo"></span></h3>
+                <form action="processa.php" method="post">
+                    <div id="step_1" class="step">
 
-    <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
-        <div id="steps" class="mb-md-3 pb-md-3">
-            <div class="line"></div>
-            <div class="step" id="step-1">
-                <i class="bi bi-person active"></i>
-                <p class="d-none d-md-block">Dados pessoais</p>
-            </div>
-            <div class="step" id="step-2">
-                <i class="bi bi-geo-alt"></i>
-                <p class="d-none d-md-block">Endereço</p>
-            </div>
-            <div class="step" id="step-3">
-                <i class="bi bi-person "></i>
-                <p class="d-none d-md-block">Login</p>
-            </div>
-        </div>
-        <div id="form-header">
-            <h2>Insira seus dados</h2>
-            <p>Preencha os campos e faça parte do nosso time</p>
-            <p>Etapa <span id="etapa"></span></p>
-        </div>
-        <!--Fomulário de cadastro Primeira etapa-->
+                        <!--Fomulário de cadastro Primeira etapa-->
+                        <div class="form-group">
+                            <label for="nome">Qual o seu nome?</label>
+                            <input type="text" name="nome" id="nome" class="form-control">
+                        </div>
 
-        <form id="dados-form">
+                        <div class="form-group">
+                            <label for="name">Qual o nome da sua mãe?</label>
+                            <input type="text" class="form-control shadow-none" id="name-mae" name="name" placeholder=""
+                                minlength="15" maxlength="80" required />
 
-            <div class="row mb-3">
-                <div class="form-floating">
+                        </div>
 
-                    <input type="text" class="form-control shadow-none" id="name" name="name"
-                        placeholder="Digite o seu Nome" minlength="15" maxlength="80" onclick="valida_nome()"
-                        required />
-                    <label for="name">Digite o seu Nome</label>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="form-floating">
-                    <input type="text" class="form-control shadow-none" id="name-mae" name="name"
-                        placeholder="Digite o nome da sua Mãe" minlength="15" maxlength="80" required />
-                    <label for="name">Digite o nome da sua Mãe</label>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                    <input type="date" class="form-control" id="date" name="date" placeholder="Data de Nascimento"
-                        required data-input />
-                    <label for="date">Data de Nascimento</label>
-                </div>
-                <div class="col-12 col-sm-6 mb-3 form-floating">
-                    <select class="form-select shadow-none" id="region" required data-input>
-                        <option selected>Sexo</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                    <input type="text" class="form-control shadow-none" id="tel" name="tel" placeholder="Telefone Fixo"
-                        required data-input />
-                    <label for="tel">Telefone Fixo</label>
-                </div>
-                <div class="col-12 col-sm-6 form-floating">
-                    <input type="text" class="form-control shadow-none" id="cel" name="cel"
-                        placeholder="Telefone Celular" required data-input />
-                    <label for="cel">Telefone Celular</label>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                    <input type="text" class="form-control shadow-none" id="cpf" name="cpf" placeholder="CPF" required
-                        data-input />
-                    <label for="cpf">CPF</label>
-                </div>
-                <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                    <input type="text" class="form-control shadow-none" id="email" name="email" placeholder="email"
-                        required data-input />
-                    <label for="email">Email</label>
-                </div>
-            </div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <input type="date" class="form-control" id="date" name="date"
+                                    placeholder="Data de Nascimento" required data-input />
+                                <label for="date">Data de Nascimento</label>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3 form-floating">
+                                <select class="form-select shadow-none" id="sexo" required data-input>
+                                    <option selected desabled value="">Sexo</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
 
-            <div id="fade" class="hide">
-                <div id="loader" class="spinner-border text-info hide" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div id="message" class="hide">
-                    <div class="alert alert-light" role="alert">
-                        <h4>Mensagem:</h4>
-                        <p></p>
-                        <button id="close-message" type="button" class="btn btn-secondary">
-                            Fechar
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!--Fomulário de cadastro Segunda etapa-->
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-group">
+                                <label for="tel">Telefone Fixo:</label>
+                                <input type="text" class="form-control shadow-none" id="tel" name="tel" placeholder=""
+                                    required data-input />
 
-            <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
-                <div id="steps" class="mb-md-3 pb-md-3">
-                    <div class="line"></div>
-                    <div class="step" id="step-1">
-                        <i class="bi bi-person "></i>
-                        <p class="d-none d-md-block">Dados pessoais</p>
-                    </div>
-                    <div class="step" id="step-2">
-                        <i class="bi bi-geo-alt active"></i>
-                        <p class="d-none d-md-block">Endereço</p>
-                    </div>
-                    <div class="step" id="step-3">
-                        <i class="bi bi-person "></i>
-                        <p class="d-none d-md-block">Login</p>
-                    </div>
-                </div>
-                <div id="form-header">
-                    <h2>Cadastre o seu endereço</h2>
-                    <p>Preencha os campos e faça parte do nosso time</p>
-                    <p>Etapa <span id="etapa"></span></p>
-                </div>
-                <form id="address-form">
-                    <div class="row mb-3">
-                        <div class="form-floating">
-                            <input type="text" class="form-control shadow-none" id="cep" name="cep"
-                                placeholder="Digite o seu CEP" maxlength="8" minlength="8" required />
-                            <label for="cep">Digite o seu CEP</label>
+                            </div>
+                            <div class="col-12 col-sm-6 form-group">
+                                <label for="cel">Telefone Celular:</label>
+                                <input type="text" class="form-control shadow-none" id="cel" name="cel" placeholder=""
+                                    required data-input />
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-group">
+                                <label for="cpf">CPF:</label>
+                                <input type="text" class="form-control shadow-none" id="cpf" name="cpf" placeholder=""
+                                    required data-input />
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="text" class="form-control shadow-none" id="address" name="address"
-                                placeholder="Rua" disabled required data-input />
-                            <label for="address">Rua</label>
+
+                    <!--Fomulário de cadastro Segunda etapa-->
+                    <div id="step_2" class="step">
+                        <div class="form-group">
+                            <label for="cep">CEP:</label>
+                            <input type="text" name="cep" id="cep" class="form-control" required>
                         </div>
-                        <div class="col-12 col-sm-6 form-floating">
-                            <input type="text" class="form-control shadow-none" id="number" name="number"
-                                placeholder="Digite o número da residência" disabled required data-input />
-                            <label for="number">Digite o número da residência</label>
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="rua">Rua:</label>
+                                    <input type="tel" name="rua" id="rua" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="number">Numero da sua residência:</label>
+                                    <input type="text" name="number" id="number" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="complement">Complemento:</label>
+                                    <input type="text" name="complement" id="complement" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="bairro">Bairro:</label>
+                                    <input type="text" name="bairro" id="bairro" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="cidade">Cidade:</label>
+                                    <input type="text" name="cidade" id="cidade" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label>Estado:</label>
+                                    <select class="form-select shadow-none" id="region" required data-input>
+                                        <option value="">Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espirito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="text" class="form-control shadow-none" id="complement" name="complement"
-                                placeholder="Digite o complemento" disabled data-input />
-                            <label for="complement">Digite o complemento</label>
-                        </div>
-                        <div class="col-12 col-sm-6 form-floating">
-                            <input type="text" class="form-control shadow-none" id="neighborhood" name="neighborhood"
-                                placeholder="Bairro" disabled required data-input />
-                            <label for="neighborhood">Bairro</label>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="text" class="form-control shadow-none" id="city" name="city"
-                                placeholder="Cidade" disabled required data-input />
-                            <label for="city">Cidade</label>
-                        </div>
-                        <div class="col-12 col-sm-6 mb-3">
-                            <select class="form-select shadow-none" id="region" disabled required data-input>
-                                <option selected>Estado</option>
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
-                        </div>
-                    </div>
+
 
                     <!--Fomulário de cadastro Terceira etapa-->
 
-                    <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
-                        <div id="steps" class="mb-md-3 pb-md-3">
-                            <div class="line"></div>
-                            <div class="step" id="step-1">
-                                <i class="bi bi-person"></i>
-                                <p class="d-none d-md-block">Dados pessoais</p>
+                    <div id="step_3" class="step">
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 form-floating">
+                                <div class="form-group">
+                                    <label for="cep">Login:</label>
+                                    <input type="text" name="cep" id="cep" class="form-control">
+                                </div>
                             </div>
-                            <div class="step" id="step-2">
-                                <i class="bi bi-geo-alt"></i>
-                                <p class="d-none d-md-block">Endereço</p>
-                            </div>
-                            <div class="step" id="step-3">
-                                <i class="bi bi-person active"></i>
-                                <p class="d-none d-md-block">Login</p>
-                            </div>
-                        </div>
-                        <div id="form-header">
-                            <h2>Cadastre seu Login</h2>
-                            <p>Preencha os campos e faça parte do nosso time</p>
-                            <p>Etapa <span id="etapa"></span></p>
-                        </div>
-                        
-                    </div>
-                        <form id="dados-form">
 
-                    
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 form-floating">
-                            <select class="form-select shadow-none" id="region" required data-input>
-                                <option selected>Perfil</option>
-                                <option value="funcionario">Funcionário</option>
-                                <option value="cliente">Cliente</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="text" class="form-control shadow-none" id="email" name="email"
-                                placeholder="email" required data-input />
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
+                            <div class=" form-group">
+                                <div class="col-12 col-sm-6 mb-3 form-floating">
+                                    <label for="id">Perfil:</label>
+                                    <select class="form-select shadow-none" id="perfil" required data-input>
+                                        <option selected desabled value="">Selecione</option>
+                                        <option value="funcionario">Funcionário</option>
+                                        <option value="cliente">Cliente</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="password" class="form-control shadow-none" id="password" name="password"
-                                placeholder="password" required data-input />
-                            <label for="password">Digite uma senha</label>
                         </div>
-                        <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
-                            <input type="password" class="form-control shadow-none" id="password" name="password"
-                                placeholder="password" required data-input />
-                            <label for="password">Confirme sua senha</label>
+
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mb-3 form-floating">
+                                <div class="form-group">
+                                    <label for="bairro">Senha:</label>
+                                    <input type="text" name="bairro" id="bairro" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+                                <div class="form-group">
+                                    <label for="bairro">Confirme a sua senha:</label>
+                                    <input type="text" name="bairro" id="bairro" class="form-control">
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
                         </div>
                     </div>
-
                 </form>
-
             </div>
-
-            <div id="fade" class="hide">
-                <div id="loader" class="spinner-border text-info hide" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <div id="message" class="hide">
-                    <div class="alert alert-light" role="alert">
-                        <h4>Mensagem:</h4>
-                        <p></p>
-                        <button id="close-message" type="button" class="btn btn-secondary">
-                            Fechar
-                        </button>
-                    </div>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <button class="btn btn-block btn-secondary" id="prev">Anterior</button>
             </div>
-
-
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
+            <div class="col-lg-6">
+                <button class="btn btn-block btn-secondary" id="next">Próximo</button>
             </div>
-
-        </form>
+        </div>
     </div>
 
-    <div class="d-flex justify-content-start">
-        <button id="prev" type="submit" class="btn btn-block btn-secundary">
-            Voltar
-        </button>
-    </div>
-    <div class="d-flex justify-content-end">
-        <button id="next" type="submit" class="btn btn-block btn-secundary">
-            Avançar
-        </button>
-    </div>
-
-    <!--JS-->
-    <script src="js/adastro.js" defer></script>
     <script src="js/etapa2.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></Script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //Esconde todos os passos e exibe o primeiro ao carregar a página 
+            $('.step').hide();
+            $('.step').first().show();
+
+            //Exibe no topo em qual passo estamos pela ordem da div que esta visivel
+            var passoexibido = function () {
+                var index = parseInt($(".step:visible").index());
+                if (index == 0) {
+                    //Se for o primeiro passo desabilita o botão de voltar
+                    $("#prev").prop('disabled', true);
+                } else if (index == (parseInt($(".step").length) - 1)) {
+                    //Se for o ultimo passo desabilita o botão de avançar
+                    $("#next").prop('disabled', true);
+                } else {
+                    //Em outras situações os dois serão habilitados
+                    $("#next").prop('disabled', false);
+                    $("#prev").prop('disabled', false);
+                }
+                $("#passo").html(index + 1);
+
+            };
+
+            //Executa a função ao carregar a página
+            passoexibido();
+
+            //avança para o próximo passo
+            $("#next").click(function () {
+                $(".step:visible").hide().next().show();
+                passoexibido();
+            });
+
+            //retrocede para o passo anterior
+            $("#prev").click(function () {
+                $(".step:visible").hide().prev().show();
+                passoexibido();
+            });
+
+        });
+    </script>
     <script>
         $('#tel').mask('(00) 0000-0000');
         $('#cel').mask('(00) 00000-0000');
         $('#cpf').mask('000.000.000-00', { reverse: true });
     </script>
-    <!--JavaScripts Bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-
 </body>
 
 </html>

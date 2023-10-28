@@ -1,0 +1,12 @@
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    background: #F6F9FF;
+}
+
+#pagrafosobre{
+    font-size: 17px;
+    line-height: 26px;
+    text-align: justify;
+}

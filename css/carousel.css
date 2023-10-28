@@ -6,6 +6,7 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     color: #5a5a5a;
+    background: #F6F9FF;
 }
 
 /* CUSTOMIZA O CAROUSEL
@@ -140,6 +141,28 @@ body {
     letter-spacing: -.05rem;
 }
 
+/*==========================
+      BACK TOP ---  VOLTA AO TOPO
+============================*/
+.back_top {
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    height: 35px;
+    width: 35px;
+    display: none;
+    z-index: 10000;
+    border-radius: 3px;
+    right: 20px;
+    transition: all 0.5s;
+  }
+  
+  .back_top i {
+    color: #0e8ff8;
+    line-height: 35px;
+    font-size: 32px;
+    display: block;
+  }
 
 /* CSS RESPONSIVE CAROUSEL
   -------------------------------------------------- */
