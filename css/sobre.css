@@ -1,12 +1,52 @@
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    min-width: 350px;
     color: #5a5a5a;
     background: #F6F9FF;
 }
 
-#pagrafosobre{
+#pagrafosobre {
     font-size: 17px;
     line-height: 26px;
     text-align: justify;
+}
+.hb-whychooseus-content{
+   
+    width: 100%;
+    margin: 30px 15px 0px 15px
+}
+.redes{
+width: 40px;
+padding: 3px;
+cursor: pointer;
+}
+
+
+/*responsivo*/
+@media (max-width:991px) {
+    .hb-whychooseus-content {
+        margin: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:1199px) {
+    .hb-whychooseus-content {
+        margin: 0 0 0 25px;
+        
+    }
+}
+@media (max-width:991px) {
+    .figure {
+        margin: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:1199px) {
+    .figure {
+        margin: 0 0 0 25px;
+        
+    }
 }
