@@ -6,20 +6,35 @@ body {
     background: #F6F9FF;
 }
 
-#pagrafosobre {
+h5,
+p {
     font-size: 17px;
     line-height: 26px;
     text-align: justify;
 }
-.hb-whychooseus-content{
-   
+
+.hb-whychooseus-content {
+
     width: 100%;
     margin: 30px 15px 0px 15px
 }
-.redes{
-width: 40px;
-padding: 3px;
-cursor: pointer;
+
+.redes {
+    width: 40px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* h2 BEFORE*/
+.hb-sectiontitle>h2::before {
+    position: absolute;
+    content: '';
+    width: 5.9%;
+    height: 2px;
+    background-color: #2aade5;
+    bottom: 30px;
+    border-radius: 5px;
+
 }
 
 
@@ -34,19 +49,20 @@ cursor: pointer;
 @media (max-width:1199px) {
     .hb-whychooseus-content {
         margin: 0 0 0 25px;
-        
+
     }
 }
+
 @media (max-width:991px) {
-    .figure {
+    .container-sb img {
         margin: 0;
         margin-top: 30px;
     }
 }
 
 @media (max-width:1199px) {
-    .figure {
+    .container-sb img {
         margin: 0 0 0 25px;
-        
+
     }
 }
