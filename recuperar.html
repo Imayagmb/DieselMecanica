@@ -8,7 +8,8 @@
 
      <!-- Mini logo na aba -->
   <link rel="shortcut icon" href="img/mini-carro.jpg" type="image/x-icon">
-
+<!-- Principal CSS do Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
     <!--ICON-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -18,7 +19,34 @@
 </head>
 
 <body>
-
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="index.html">Díesel+</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">INÍCIO </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="serviços.html">SERVIÇOS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">SOBRE NÓS</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <a class="btn btn-outline-success  mr-sm-2" type="submit" href="login.html">ÁREA DO CLIENTE</a>
+                    <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">CADASTRO</a>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- FIM MENU-->
+    <br>
     <main id="container">
         <div class="left-login">
             <h1>Enviaremos um código<br> para o seu e-mail</h1>

@@ -10,7 +10,7 @@ h5,
 p {
     font-size: 17px;
     line-height: 26px;
-    text-align: justify;
+    
 }
 
 .hb-whychooseus-content {
@@ -25,17 +25,6 @@ p {
     cursor: pointer;
 }
 
-/* h2 BEFORE*/
-.hb-sectiontitle>h2::before {
-    position: absolute;
-    content: '';
-    width: 5.9%;
-    height: 2px;
-    background-color: #2aade5;
-    bottom: 30px;
-    border-radius: 5px;
-
-}
 
 
 /*responsivo*/
