@@ -10,13 +10,7 @@ h5,
 p {
     font-size: 17px;
     line-height: 26px;
-    
-}
 
-.hb-whychooseus-content {
-
-    width: 100%;
-    margin: 30px 15px 0px 15px
 }
 
 .redes {
@@ -27,7 +21,7 @@ p {
 
 
 
-/*responsivo*/
+/*responsivo
 @media (max-width:991px) {
     .hb-whychooseus-content {
         margin: 0;
@@ -52,6 +46,44 @@ p {
 @media (max-width:1199px) {
     .container-sb img {
         margin: 0 0 0 25px;
+
+    }
+} */
+
+@media only screen and (max-width:950px) {
+    .container-qs {
+        width: 100%;
+        height: 50%;
+    }
+
+    .container-qs h5 {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width:640px) {
+    .container {
+        width: 50%;
+    }
+
+
+}
+
+@media only screen and (max-width:600px) {
+
+    .container {
+
+        width: 50%;
+
+    }
+
+
+}
+
+@media only screen and (max-width:280px) {
+    .container {
+        width: 10%;
 
     }
 }
