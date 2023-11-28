@@ -138,6 +138,15 @@
 .input-field input:focus {
     outline: none;
 }
+/* LOGIN PASSWORD */
+#login_password a {
+    text-decoration: none;
+    color: var(--color-dark-50);
+    font-size: 15px;
+}
+#login_password a:hover {
+    color: #0bd477;
+}
 
 
 /* LOGIN BUTTON */

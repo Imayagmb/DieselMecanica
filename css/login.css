@@ -149,7 +149,7 @@
 #forgot_password a {
     text-decoration: none;
     color: var(--color-dark-50);
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #forgot_password a:hover {
