@@ -33,9 +33,8 @@ O site desenvolvido inclui:
 3. **Página de Serviços**:
    - Detalhes sobre os serviços prestados pela empresa.
 
-4. **Página de Contato**:
-   - Formulário para os usuários entrarem em contato.
-   - Mapa de localização da empresa.
+4. **Página de Sobre Nós**:
+   - Conta a história da empresa.
 
 5. **Responsividade**:
    - Design adaptado para diferentes tamanhos de tela, incluindo dispositivos móveis.
