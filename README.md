@@ -55,6 +55,4 @@ Bruno Freitas e
 Laís do Carmo 
 
 ### Uma pequena amostra de como está ficando.
-```
 https://imayagmb.github.io/DieselMecanica/index.html
-```
