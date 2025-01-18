@@ -52,7 +52,7 @@ O site desenvolvido inclui:
 Este projeto foi desenvolvido como parte de um projeto acadêmico, por 
 Mayara Gonçalves, 
 Bruno Freitas e 
-Laís do Carmo 
+Laís Godoy 
 
 ### Uma pequena amostra de como está ficando.
 https://imayagmb.github.io/DieselMecanica/index.html
