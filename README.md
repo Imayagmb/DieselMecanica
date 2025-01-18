@@ -55,4 +55,4 @@ Bruno Freitas e
 Laís Godoy 
 
 ### Uma pequena amostra de como está ficando.
-![Mecânica Diesel](https://diesel-mecanica.vercel.app/servi%C3%A7os.html)
+[Mecânica Diesel](https://diesel-mecanica.vercel.app/servi%C3%A7os.html)
